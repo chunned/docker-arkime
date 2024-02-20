@@ -5,6 +5,7 @@ This repository is forked from [mammo0/docker-arkime](https://github.com/mammo0/
 # Clone repo
 git clone https://github.com/chunned/docker-arkime/
 cd docker-arkime
+sudo sysctl -w vm.max_map_count=262144   # required for OpenSearch
 sudo docker compose up
 ```
 In another terminal window, enter the Arkime container: `docker exec -it docker-arkime-arkime-1 /bin/bash`
