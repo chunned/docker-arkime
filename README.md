@@ -5,9 +5,6 @@ This repository is forked from [mammo0/docker-arkime](https://github.com/mammo0/
 # Clone repo
 git clone https://github.com/chunned/docker-arkime/
 cd docker-arkime
-# Rename docker-compose.env to .env
-cp docker-compose.env .env
-# Bring up the compose stack
 sudo docker compose up
 ```
 In another terminal window, enter the Arkime container: `docker exec -it docker-arkime-arkime-1 /bin/bash`
