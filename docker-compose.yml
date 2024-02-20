@@ -43,6 +43,21 @@ services:
               target: /data/pcap
         networks:
             - arkime-os
+    
+    suricata:
+      image: quay.io/jasonish/suricata:latest
+      volumes:
+        - ./suri_logs:/var/log/suricata
+        - ./suri_etc:/etc/suricata
+      cap_add:
+        - sys_nice
+        - net_raw
+        - net_admin
+      tty: true
+      stdin_open: true
+      command: '-i ens18'
+      network_mode: host
+
 
 volumes:
     arkime_config:
