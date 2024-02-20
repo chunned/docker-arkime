@@ -67,6 +67,8 @@ services:
         environment:
             - OS_HOST=$OS_NODE1
             - OS_PORT=9200
+            - CAPTURE=on
+            - ARKIME_INTERFACE=eth0
         ports:
             - $ARKIME_PORT:8005
         volumes:
